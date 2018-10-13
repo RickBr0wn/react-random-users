@@ -27,7 +27,7 @@ body {
   margin: 4.4em auto;
   padding-bottom: 4.4rem;
   border-radius: .35em;
-  background: #fcfcfc;
+  background: #f0efef;
   overflow: hidden;
   -webkit-box-shadow: 0 0 26px rgba(0, 0, 0, .13);
   box-shadow: 0 0 26px rgba(0, 0, 0, .13);
@@ -53,4 +53,25 @@ hr {
 
 .spacer {
   margin-right: 0.4rem;
+}
+
+.header {
+  background-color: #282C34;
+  padding: 4.8rem 0 12.6rem 0;
+  color: #f4f4f4;
+  margin-bottom: 2.4rem;
+}
+
+.profile-picture {
+  margin-top: -18rem;
+}
+
+.circle{ 
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.name {
+  margin-top: 1.2rem;
+  font-size: 2.6rem;
 }

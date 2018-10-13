@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+const log = i => console.log(i)
+
 class ProfilePicture extends Component {
   state = {
     data: this.props.data
   }
   
   render() {  
-    console.log(this.state)
+    const url = this.props.image
   
     return (
-      <div>
-        <img src={""} alt="A face" />
+      <div className="picture-background">
+        <img className="circle profile-picture" src={url} alt="A face" />
       </div>
     )
   }
