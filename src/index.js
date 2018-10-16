@@ -9,13 +9,7 @@ import { rootReducer } from './reducers/rootReducer'
 import thunk from 'redux-thunk'
 
 const initalState  = {
-  user: {
-    title: '',
-    first: '',
-    last: '',
-    picture: '',
-    email: ''
-  }
+  user: {}
 }
 
 const reduxDevToolsExtension = window.devToolsExtension && window.devToolsExtension()

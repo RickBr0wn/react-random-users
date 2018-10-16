@@ -19,7 +19,12 @@ export const gotUser = user => {
       first: user.results[0].name.first,
       last: user.results[0].name.last,
       picture: user.results[0].picture.large,
-      email: user.results[0].email
+      email: user.results[0].email,
+      phone: user.results[0].phone,
+      mobile: user.results[0].cell,
+      dob: user.results[0].dob.date,
+      age: user.results[0].dob.age,
+      username: user.results[0].login.username 
     }
   }
 }
