@@ -3,18 +3,26 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
-import rootReducer from './reducers/rootReducer'
-// import thunk from 'redux-thunk'
+import { rootReducer } from './reducers/rootReducer'
+import thunk from 'redux-thunk'
 
-const preLoadedState  = {
-  data: []
+const initalState  = {
+  user: {
+    title: '',
+    first: '',
+    last: '',
+    picture: '',
+    email: ''
+  }
 }
 
 const reduxDevToolsExtension = window.devToolsExtension && window.devToolsExtension()
 
-const store = createStore(rootReducer, /* applyMiddleware(thunk), */preLoadedState, reduxDevToolsExtension)
+const allStoreMiddleware = compose(applyMiddleware(thunk), reduxDevToolsExtension)
+
+const store = createStore(rootReducer, initalState, allStoreMiddleware)
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'))
 

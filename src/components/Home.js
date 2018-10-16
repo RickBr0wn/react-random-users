@@ -1,49 +1,28 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { updateData } from '../actions/dataActions'
-import { dummyUser } from '../DummyUser'
-import dataReducer from '../reducers/rootReducer'
 import Header from './Header'
-import ProfilePicture from './ProfilePicture'
-import Name from './Name'
-
-const log = i => console.log(i)
-const dummy = dummyUser()
+import { connect } from 'react-redux'
+import { fetchAPI } from '../actions/userActions'
 
 export class Home extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      data: dummy
-    }
+  componentDidMount() {
+    console.log(this.props)
+    this.props.onFetchAPI()
   }
-  
-  onUpdateData = (e) => {
-    this.props.onUpdateData(dummy)
-    this.setState({
-      data: dummy
-    })
-  }
-  
-  
-  componentDidMount = () => {
-    this.onUpdateData()
-  }
-  
-  render() {
-    const { data } = this.props
-    const dataKeys = Object.keys(this.state.data).map(i => {
-      return <p>{i}</p>
-    })
 
-    const user = this.state.data.results[0]
-    log(user.name.first)
+  render() {
+    console.log(this.props);
+    const fullName = `${this.props.user.first} ${this.props.user.last}`
+    const email = this.props.user.email
+    const picture = this.props.user.picture
     return (
       <div className="center">
         <Header />
+        <div className="dividing-line"></div>
         <div className="container">
-          <ProfilePicture image={user.picture.large} />
-          <Name name={user.name} />
+          <img src={picture} className="circle profile-picture" />
+          <p>{fullName}</p>
+          <p>{email}</p>
+          <p>{email}</p>
         </div>
       </div>
     )
@@ -52,12 +31,12 @@ export class Home extends Component {
 
 const mapStateToProps = state => {
   return {
-    data: state.data
+    user: state.user
   }
 }
 
 const mapActionsToProps = {
-  onUpdateData: updateData
+  onFetchAPI: fetchAPI
 }
 
 export default connect(mapStateToProps, mapActionsToProps)(Home)
