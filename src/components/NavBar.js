@@ -11,7 +11,7 @@ const NavBar = props => {
   return (
     <nav className="nav nav-wrapper deep-purple darken-4">
       <div className="container">
-        <Link to="/" className="brand-logo">React/Redux/Thunk - Random Users</Link>
+        <Link to="/" className="brand-logo">Random Users</Link>
         <ul className="right">
           <li className="highlight">
             <div onClick={handleClick}>New User</div>

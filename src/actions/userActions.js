@@ -16,6 +16,7 @@ export const gotUser = user => {
   return {
     type: GOT_USER,
     payload: {
+      title: user.results[0].name.title,
       first: user.results[0].name.first,
       last: user.results[0].name.last,
       picture: user.results[0].picture.large,

@@ -12,7 +12,8 @@ export class Dashboard extends Component {
   }
 
   render() {
-    const fullName = `${this.props.user.first} ${this.props.user.last}`
+    console.log(this.props)
+    const fullName = `${this.props.user.title} ${this.props.user.first} ${this.props.user.last}`
     const email = this.props.user.email
     const userName = this.props.user.username
     const display = ''
@@ -22,12 +23,15 @@ export class Dashboard extends Component {
         <div className="display">{display}</div>
         <div className="button-container">
           <div className="dashboard">
-            <div className="button-holder" onClick={this.handleClick('user')}>USER</div>
-            <div className="button-holder" onClick={this.handleClick('contact')}>CONTACT</div>
-            <div className="button-holder" onClick={this.handleClick('personal')}>PERSONAL</div>
-            <div className="button-holder" onClick={this.handleClick('account')}>ACCOUNT DETAILS</div>
+            <div className="button-holder" onClick={this.handleClick('user')}>U</div>
+            <div className="button-holder" onClick={this.handleClick('contact')}>C</div>
+            <div className="button-holder" onClick={this.handleClick('personal')}>P</div>
+            <div className="button-holder" onClick={this.handleClick('account')}>A</div>
           </div>
         </div>
+            <div className="data">
+              <div className="title-text grey-text">{fullName}</div>
+            </div>
       </div>
     )
   }

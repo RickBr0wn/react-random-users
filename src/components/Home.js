@@ -18,9 +18,6 @@ export class Home extends Component {
         <div className="container">
           <img src={picture} className="circle profile-picture" />
           <Dashboard />
-          <Dashboard />
-          <Dashboard />
-          <Dashboard />
         </div>
       </div>
     )
