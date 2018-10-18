@@ -16,7 +16,7 @@ export class Home extends Component {
         <Header />
         <div className="dividing-line"></div>
         <div className="container">
-          <img src={picture} className="circle profile-picture" />
+          <img src={picture} className="circle profile-picture" alt="A Random Face" />
           <Dashboard />
         </div>
       </div>

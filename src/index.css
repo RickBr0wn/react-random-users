@@ -56,7 +56,8 @@ hr {
 }
 
 .header {
-  background-color: #7c4dff;
+  background: linear-gradient(to right, rgba(124, 77, 255, 0.8), rgba(49, 27, 146, 0.8), rgb(124, 77, 255, 0.8)), url('https://image.freepik.com/free-vector/circular-halftone-dots-vector-background_1017-12226.jpg');
+  background-size: cover;
   padding: 4.8rem 0 12.6rem 0;
   color: #f5f5f5;
   margin-bottom: 2.4rem;
@@ -74,7 +75,7 @@ hr {
 }
 
 .circle{ 
-  background-color: #311b92;
+  background-color: rgb(49, 27, 146);
   padding: 0.6rem;
 }
 
@@ -136,8 +137,9 @@ hr {
 }
 
 .page-footer {
-  background-color: #7c4dff;
+  background: linear-gradient(to right, rgba(124, 77, 255, 0.8), rgba(49, 27, 146, 0.8), rgb(124, 77, 255, 0.8)), url('https://image.freepik.com/free-vector/circular-halftone-dots-vector-background_1017-12226.jpg');
   padding: 4.8rem 0 12.6rem 0;
+  background-size: cover;
   color: #f5f5f5;
   padding-bottom: 0;
   margin-top: 6.8rem;

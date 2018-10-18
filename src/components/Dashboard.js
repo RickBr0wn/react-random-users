@@ -12,15 +12,14 @@ export class Dashboard extends Component {
   }
 
   render() {
-    console.log(this.props)
-    const fullName = `${this.props.user.title} ${this.props.user.first} ${this.props.user.last}`
-    const email = this.props.user.email
-    const userName = this.props.user.username
-    const display = ''
+    const user = this.props.user
+    console.log(user.first)
+    const fullName = `${user.title} ${user.first} ${user.last}`
+    const display = fullName
 
     return (
       <div>
-        <div className="display">{display}</div>
+        <div className="display"></div>
         <div className="button-container">
           <div className="dashboard">
             <div className="button-holder" onClick={this.handleClick('user')}>U</div>
@@ -30,7 +29,7 @@ export class Dashboard extends Component {
           </div>
         </div>
             <div className="data">
-              <div className="title-text grey-text">{fullName}</div>
+              <div className="title-text grey-text">{display}</div>
             </div>
       </div>
     )
